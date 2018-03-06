@@ -1,4 +1,97 @@
+<?php
+$con=mysqli_connect("localhost","root","","dw_newsfeed");
+// Check connection
+define('USE_PCONNECT', 'false'); 
+define('STORE_SESSIONS', 'mysql');
+if (mysqli_connect_errno()) {
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+ }
 
+$sql="SELECT * FROM `logo` order by `logo_id` ASC";
+
+$result_logo=mysqli_query($con,$sql);
+while($row_logo=mysqli_fetch_array($result_logo)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['logo'] =$row_logo['logo_img'];
+	}
+
+
+$sql_1="SELECT * FROM `latestnews` order by `lnews_id` ASC";
+
+$result_lnews_1=mysqli_query($con,$sql_1);
+while($row_lnews_1=mysqli_fetch_array($result_lnews_1)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['lnews_img_1'] =$row_lnews_1['lnews_img'];
+		$_SESSION['lnews_1'] =$row_lnews_1['lnews'];
+	}
+
+$result_lnews_2=mysqli_query($con,$sql_1);
+while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['lnews_img_2'] =$row_lnews_2['lnews_img'];
+		$_SESSION['lnews_2'] =$row_lnews_2['lnews'];
+	}
+$result_lnews_2=mysqli_query($con,$sql_1);
+while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['lnews_img_3'] =$row_lnews_2['lnews_img'];
+		$_SESSION['lnews_3'] =$row_lnews_2['lnews'];
+	}
+$result_lnews_2=mysqli_query($con,$sql_1);
+while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['lnews_img_2'] =$row_lnews_2['lnews_img'];
+		$_SESSION['lnews_2'] =$row_lnews_2['lnews'];
+	}
+$result_lnews_2=mysqli_query($con,$sql_1);
+while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['lnews_img_4'] =$row_lnews_2['lnews_img'];
+		$_SESSION['lnews_4'] =$row_lnews_2['lnews'];
+	}
+$result_lnews_2=mysqli_query($con,$sql_1);
+while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['lnews_img_5'] =$row_lnews_2['lnews_img'];
+		$_SESSION['lnews_5'] =$row_lnews_2['lnews'];
+	}
+$result_lnews_2=mysqli_query($con,$sql_1);
+while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['lnews_img_6'] =$row_lnews_2['lnews_img'];
+		$_SESSION['lnews_6'] =$row_lnews_2['lnews'];
+	}
+$result_lnews_2=mysqli_query($con,$sql_1);
+while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['lnews_img_7'] =$row_lnews_2['lnews_img'];
+		$_SESSION['lnews_7'] =$row_lnews_2['lnews'];
+	}
+$result_lnews_2=mysqli_query($con,$sql_1);
+while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['lnews_img_8'] =$row_lnews_2['lnews_img'];
+		$_SESSION['lnews_8'] =$row_lnews_2['lnews'];
+	}
+$result_lnews_2=mysqli_query($con,$sql_1);
+while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['lnews_img_9'] =$row_lnews_2['lnews_img'];
+		$_SESSION['lnews_9'] =$row_lnews_2['lnews'];
+	}
+
+?>
 
 
 <!DOCTYPE html>
@@ -46,7 +139,7 @@
       </div>
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="header_bottom">
-          <div class="logo_area"><a href="index.html" class="logo"><img src="images/logo.jpg" alt=""></a></div>
+          <div class="logo_area"><a href="index.php" class="logo"><img src="<?php echo $_SESSION['logo']?>" alt="knewsfeed"></a></div>
           <div class="add_banner"><a href="#"><img src="images/addbanner_728x90_V1.jpg" alt=""></a></div>
         </div>
       </div>
@@ -59,7 +152,7 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav main_nav">
-          <li class="active"><a href="index.html"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+          <li class="active"><a href="index.php"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
           <li><a href="#">Technology</a></li>
           <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile</a>
             <ul class="dropdown-menu" role="menu">
@@ -83,15 +176,15 @@
       <div class="col-lg-12 col-md-12">
         <div class="latest_newsarea"> <span>Latest News</span>
           <ul id="ticker01" class="news_sticker">
-            <li><a href="#"><img src="images/news_thumbnail3.jpg" alt="">My First News Item</a></li>
-            <li><a href="#"><img src="images/news_thumbnail3.jpg" alt="">My Second News Item</a></li>
-            <li><a href="#"><img src="images/news_thumbnail3.jpg" alt="">My Third News Item</a></li>
-            <li><a href="#"><img src="images/news_thumbnail3.jpg" alt="">My Four News Item</a></li>
-            <li><a href="#"><img src="images/news_thumbnail3.jpg" alt="">My Five News Item</a></li>
-            <li><a href="#"><img src="images/news_thumbnail3.jpg" alt="">My Six News Item</a></li>
-            <li><a href="#"><img src="images/news_thumbnail3.jpg" alt="">My Seven News Item</a></li>
-            <li><a href="#"><img src="images/news_thumbnail3.jpg" alt="">My Eight News Item</a></li>
-            <li><a href="#"><img src="images/news_thumbnail2.jpg" alt="">My Nine News Item</a></li>
+            <li><a href="#"><img src="<?php echo $_SESSION['lnews_img_1']?>" alt=""><?php echo $_SESSION['lnews_1']?></a></li>
+            <li><a href="#"><img src="<?php echo $_SESSION['lnews_img_2']?>" alt=""><?php echo $_SESSION['lnews_2']?></a></li>
+            <li><a href="#"><img src="<?php echo $_SESSION['lnews_img_3']?>" alt=""><?php echo $_SESSION['lnews_3']?></a></li>
+            <li><a href="#"><img src="<?php echo $_SESSION['lnews_img_4']?>" alt=""><?php echo $_SESSION['lnews_4']?></a></li>
+            <li><a href="#"><img src="<?php echo $_SESSION['lnews_img_5']?>" alt=""><?php echo $_SESSION['lnews_5']?></a></li>
+            <li><a href="#"><img src="<?php echo $_SESSION['lnews_img_6']?>" alt=""><?php echo $_SESSION['lnews_6']?></a></li>
+            <li><a href="#"><img src="<?php echo $_SESSION['lnews_img_7']?>" alt=""><?php echo $_SESSION['lnews_7']?></a></li>
+            <li><a href="#"><img src="<?php echo $_SESSION['lnews_img_8']?>" alt=""><?php echo $_SESSION['lnews_8']?></a></li>
+            <li><a href="#"><img src="<?php echo $_SESSION['lnews_img_9']?>" alt=""><?php echo $_SESSION['lnews_9']?></a></li>
           </ul>
           <div class="social_area">
             <ul class="social_nav">
@@ -501,8 +594,8 @@
       </div>
     </div>
     <div class="footer_bottom">
-      <p class="copyright">Copyright &copy; 2045 <a href="index.html">NewsFeed</a></p>
-      <p class="developer">Developed By Wpfreeware</p>
+      <p class="copyright">Copyright &copy; 2018 <a href="index.php">KNewsFeed</a></p>
+      <p class="developer">Developed By Kashif Ahmad</p>
     </div>
   </footer>
 </div>
