@@ -9,11 +9,17 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
 $sql="SELECT * FROM `logo` order by `logo_id` ASC";
 
-$result_logo=mysqli_query($con,$sql);
-while($row_logo=mysqli_fetch_array($result_logo)) 
+$result_logo1=mysqli_query($con,$sql);
+while($row_logo1=mysqli_fetch_array($result_logo1)) 
 	{
 		//$_SESSION['auth']=true;
-		$_SESSION['logo'] =$row_logo['logo_img'];
+		$_SESSION['logo1'] =$row_logo1['logo_img'];
+	}
+$result_logo2=mysqli_query($con,$sql);
+while($row_logo2=mysqli_fetch_array($result_logo2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['logo2'] =$row_logo2['logo_img'];
 	}
 
 
@@ -34,61 +40,55 @@ while($row_lnews_2=mysqli_fetch_array($result_lnews_2))
 		$_SESSION['lnews_img_2'] =$row_lnews_2['lnews_img'];
 		$_SESSION['lnews_2'] =$row_lnews_2['lnews'];
 	}
-$result_lnews_2=mysqli_query($con,$sql_1);
-while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+$result_lnews_3=mysqli_query($con,$sql_1);
+while($row_lnews_3=mysqli_fetch_array($result_lnews_3)) 
 	{
 		//$_SESSION['auth']=true;
-		$_SESSION['lnews_img_3'] =$row_lnews_2['lnews_img'];
-		$_SESSION['lnews_3'] =$row_lnews_2['lnews'];
+		$_SESSION['lnews_img_3'] =$row_lnews_3['lnews_img'];
+		$_SESSION['lnews_3'] =$row_lnews_3['lnews'];
 	}
-$result_lnews_2=mysqli_query($con,$sql_1);
-while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+$result_lnews_4=mysqli_query($con,$sql_1);
+while($row_lnews_4=mysqli_fetch_array($result_lnews_4)) 
 	{
 		//$_SESSION['auth']=true;
-		$_SESSION['lnews_img_2'] =$row_lnews_2['lnews_img'];
-		$_SESSION['lnews_2'] =$row_lnews_2['lnews'];
+		$_SESSION['lnews_img_4'] =$row_lnews_4['lnews_img'];
+		$_SESSION['lnews_4'] =$row_lnews_4['lnews'];
 	}
-$result_lnews_2=mysqli_query($con,$sql_1);
-while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+$result_lnews_5=mysqli_query($con,$sql_1);
+while($row_lnews_5=mysqli_fetch_array($result_lnews_5)) 
 	{
 		//$_SESSION['auth']=true;
-		$_SESSION['lnews_img_4'] =$row_lnews_2['lnews_img'];
-		$_SESSION['lnews_4'] =$row_lnews_2['lnews'];
+		$_SESSION['lnews_img_5'] =$row_lnews_5['lnews_img'];
+		$_SESSION['lnews_5'] =$row_lnews_5['lnews'];
 	}
-$result_lnews_2=mysqli_query($con,$sql_1);
-while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+$result_lnews_6=mysqli_query($con,$sql_1);
+while($row_lnews_6=mysqli_fetch_array($result_lnews_6)) 
 	{
 		//$_SESSION['auth']=true;
-		$_SESSION['lnews_img_5'] =$row_lnews_2['lnews_img'];
-		$_SESSION['lnews_5'] =$row_lnews_2['lnews'];
+		$_SESSION['lnews_img_6'] =$row_lnews_6['lnews_img'];
+		$_SESSION['lnews_6'] =$row_lnews_6['lnews'];
 	}
-$result_lnews_2=mysqli_query($con,$sql_1);
-while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+$result_lnews_7=mysqli_query($con,$sql_1);
+while($row_lnews_7=mysqli_fetch_array($result_lnews_7)) 
 	{
 		//$_SESSION['auth']=true;
-		$_SESSION['lnews_img_6'] =$row_lnews_2['lnews_img'];
-		$_SESSION['lnews_6'] =$row_lnews_2['lnews'];
+		$_SESSION['lnews_img_7'] =$row_lnews_7['lnews_img'];
+		$_SESSION['lnews_7'] =$row_lnews_7['lnews'];
 	}
-$result_lnews_2=mysqli_query($con,$sql_1);
-while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+
+$result_lnews_8=mysqli_query($con,$sql_1);
+while($row_lnews_8=mysqli_fetch_array($result_lnews_8)) 
 	{
 		//$_SESSION['auth']=true;
-		$_SESSION['lnews_img_7'] =$row_lnews_2['lnews_img'];
-		$_SESSION['lnews_7'] =$row_lnews_2['lnews'];
+		$_SESSION['lnews_img_8'] =$row_lnews_8['lnews_img'];
+		$_SESSION['lnews_8'] =$row_lnews_8['lnews'];
 	}
-$result_lnews_2=mysqli_query($con,$sql_1);
-while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
+$result_lnews_9=mysqli_query($con,$sql_1);
+while($row_lnews_9=mysqli_fetch_array($result_lnews_9)) 
 	{
 		//$_SESSION['auth']=true;
-		$_SESSION['lnews_img_8'] =$row_lnews_2['lnews_img'];
-		$_SESSION['lnews_8'] =$row_lnews_2['lnews'];
-	}
-$result_lnews_2=mysqli_query($con,$sql_1);
-while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
-	{
-		//$_SESSION['auth']=true;
-		$_SESSION['lnews_img_9'] =$row_lnews_2['lnews_img'];
-		$_SESSION['lnews_9'] =$row_lnews_2['lnews'];
+		$_SESSION['lnews_img_9'] =$row_lnews_9['lnews_img'];
+		$_SESSION['lnews_9'] =$row_lnews_9['lnews'];
 	}
 
 ?>
@@ -139,7 +139,8 @@ while($row_lnews_2=mysqli_fetch_array($result_lnews_2))
       </div>
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="header_bottom">
-          <div class="logo_area"><a href="index.php" class="logo"><img src="<?php echo $_SESSION['logo']?>" alt="knewsfeed"></a></div>
+          <div class="logo_area"><a href="index.php" class="logo"><img src="<?php echo $_SESSION['logo1']?>" alt="knewsfeed"></a></div>
+          <div class="logo_area"><a href="index.php" class="logo"><img src="<?php echo $_SESSION['logo2']?>" alt="knewsfeed"></a></div>
           <div class="add_banner"><a href="#"><img src="images/addbanner_728x90_V1.jpg" alt=""></a></div>
         </div>
       </div>
