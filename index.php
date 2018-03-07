@@ -91,7 +91,28 @@ while($row_lnews_9=mysqli_fetch_array($result_lnews_9))
 		$_SESSION['lnews_9'] =$row_lnews_9['lnews'];
 	}
 
+
+$sql_2="SELECT * FROM `article_slider` order by `aslider_id` ASC";
+
+$result_sl1=mysqli_query($con,$sql_2);
+while($row_sl1=mysqli_fetch_array($result_sl1)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['sl_img1'] =$row_sl1['as_img'];
+		$_SESSION['sl_title1'] =$row_sl1['as_title'];
+		$_SESSION['sl_desc1'] =$row_sl1['as_desc'];
+	}
+$result_sl2=mysqli_query($con,$sql_2);
+while($row_sl2=mysqli_fetch_array($result_sl2)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['sl_img2'] =$row_sl2['as_img'];
+		$_SESSION['sl_title2'] =$row_sl2['as_title'];
+		$_SESSION['sl_desc2'] =$row_sl2['as_desc'];
+	}
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -207,10 +228,34 @@ while($row_lnews_9=mysqli_fetch_array($result_lnews_9))
     <div class="row">
       <div class="col-lg-8 col-md-8 col-sm-8">
         <div class="slick_slider">
-          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="images/slider_img4.jpg" alt=""></a>
+          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="<?php echo $_SESSION['sl_img1']?>" alt="Article Slide 1"></a>
             <div class="slider_article">
-              <h2><a class="slider_tittle" href="pages/single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-              <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
+              <h2><a class="slider_tittle" href="pages/single_page.html"><?php echo $_SESSION['sl_title1']?></a></h2>
+              <p><?php echo $_SESSION['sl_desc1']?></p>
+            </div>
+          </div>
+          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="<?php echo $_SESSION['sl_img2']?>" alt="Article Slide 2"></a>
+            <div class="slider_article">
+              <h2><a class="slider_tittle" href="pages/single_page.html"><?php echo $_SESSION['sl_title2']?></a></h2>
+              <p><?php echo $_SESSION['sl_desc2']?></p>
+            </div>
+          </div>
+          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="<?php echo $_SESSION['sl_img3']?>" alt="Article Slide 3"></a>
+            <div class="slider_article">
+              <h2><a class="slider_tittle" href="pages/single_page.html"><?php echo $_SESSION['sl_title3']?></a></h2>
+              <p><?php echo $_SESSION['sl_desc3']?></p>
+            </div>
+          </div>
+          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="<?php echo $_SESSION['sl_img4']?>" alt="Article Slide 4"></a>
+            <div class="slider_article">
+              <h2><a class="slider_tittle" href="pages/single_page.html"><?php echo $_SESSION['sl_title4']?></a></h2>
+              <p><?php echo $_SESSION['sl_desc4']?></p>
+            </div>
+          </div>
+          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="<?php echo $_SESSION['sl_img5']?>" alt="Article Slide 5"></a>
+            <div class="slider_article">
+              <h2><a class="slider_tittle" href="pages/single_page.html"><?php echo $_SESSION['sl_title5']?></a></h2>
+              <p><?php echo $_SESSION['sl_desc5']?></p>
             </div>
           </div>
           <div class="single_iteam"> <a href="pages/single_page.html"> <img src="images/slider_img2.jpg" alt=""></a>
