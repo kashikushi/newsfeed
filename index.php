@@ -7,7 +7,7 @@ if (mysqli_connect_errno()) {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
  }
 
-$sql="SELECT * FROM `logo` order by `logo_id` ASC";
+$sql="SELECT * FROM `logo` WHERE `logo_id` = 1 ";
 
 $result_logo1=mysqli_query($con,$sql);
 while($row_logo1=mysqli_fetch_array($result_logo1)) 
@@ -15,6 +15,9 @@ while($row_logo1=mysqli_fetch_array($result_logo1))
 		//$_SESSION['auth']=true;
 		$_SESSION['logo1'] =$row_logo1['logo_img'];
 	}
+
+$sql = "SELECT * FROM `logo` WHERE `logo_id` = 2";
+
 $result_logo2=mysqli_query($con,$sql);
 while($row_logo2=mysqli_fetch_array($result_logo2)) 
 	{
@@ -23,7 +26,7 @@ while($row_logo2=mysqli_fetch_array($result_logo2))
 	}
 
 
-$sql_1="SELECT * FROM `latestnews` order by `lnews_id` ASC";
+$sql_1="SELECT * FROM `latestnews` WHERE `lnews_id` = 1 ";
 
 $result_lnews_1=mysqli_query($con,$sql_1);
 while($row_lnews_1=mysqli_fetch_array($result_lnews_1)) 
@@ -32,7 +35,7 @@ while($row_lnews_1=mysqli_fetch_array($result_lnews_1))
 		$_SESSION['lnews_img_1'] =$row_lnews_1['lnews_img'];
 		$_SESSION['lnews_1'] =$row_lnews_1['lnews'];
 	}
-
+$sql_1="SELECT * FROM `latestnews` WHERE `lnews_id` = 2 ";
 $result_lnews_2=mysqli_query($con,$sql_1);
 while($row_lnews_2=mysqli_fetch_array($result_lnews_2)) 
 	{
@@ -40,6 +43,7 @@ while($row_lnews_2=mysqli_fetch_array($result_lnews_2))
 		$_SESSION['lnews_img_2'] =$row_lnews_2['lnews_img'];
 		$_SESSION['lnews_2'] =$row_lnews_2['lnews'];
 	}
+$sql_1="SELECT * FROM `latestnews` WHERE `lnews_id` = 3 ";
 $result_lnews_3=mysqli_query($con,$sql_1);
 while($row_lnews_3=mysqli_fetch_array($result_lnews_3)) 
 	{
@@ -47,6 +51,7 @@ while($row_lnews_3=mysqli_fetch_array($result_lnews_3))
 		$_SESSION['lnews_img_3'] =$row_lnews_3['lnews_img'];
 		$_SESSION['lnews_3'] =$row_lnews_3['lnews'];
 	}
+$sql_1="SELECT * FROM `latestnews` WHERE `lnews_id` = 4 ";
 $result_lnews_4=mysqli_query($con,$sql_1);
 while($row_lnews_4=mysqli_fetch_array($result_lnews_4)) 
 	{
@@ -54,6 +59,7 @@ while($row_lnews_4=mysqli_fetch_array($result_lnews_4))
 		$_SESSION['lnews_img_4'] =$row_lnews_4['lnews_img'];
 		$_SESSION['lnews_4'] =$row_lnews_4['lnews'];
 	}
+$sql_1="SELECT * FROM `latestnews` WHERE `lnews_id` = 5 ";
 $result_lnews_5=mysqli_query($con,$sql_1);
 while($row_lnews_5=mysqli_fetch_array($result_lnews_5)) 
 	{
@@ -61,6 +67,7 @@ while($row_lnews_5=mysqli_fetch_array($result_lnews_5))
 		$_SESSION['lnews_img_5'] =$row_lnews_5['lnews_img'];
 		$_SESSION['lnews_5'] =$row_lnews_5['lnews'];
 	}
+$sql_1="SELECT * FROM `latestnews` WHERE `lnews_id` = 6 ";
 $result_lnews_6=mysqli_query($con,$sql_1);
 while($row_lnews_6=mysqli_fetch_array($result_lnews_6)) 
 	{
@@ -68,6 +75,7 @@ while($row_lnews_6=mysqli_fetch_array($result_lnews_6))
 		$_SESSION['lnews_img_6'] =$row_lnews_6['lnews_img'];
 		$_SESSION['lnews_6'] =$row_lnews_6['lnews'];
 	}
+$sql_1="SELECT * FROM `latestnews` WHERE `lnews_id` = 7 ";
 $result_lnews_7=mysqli_query($con,$sql_1);
 while($row_lnews_7=mysqli_fetch_array($result_lnews_7)) 
 	{
@@ -75,7 +83,7 @@ while($row_lnews_7=mysqli_fetch_array($result_lnews_7))
 		$_SESSION['lnews_img_7'] =$row_lnews_7['lnews_img'];
 		$_SESSION['lnews_7'] =$row_lnews_7['lnews'];
 	}
-
+$sql_1="SELECT * FROM `latestnews` WHERE `lnews_id` = 8 ";
 $result_lnews_8=mysqli_query($con,$sql_1);
 while($row_lnews_8=mysqli_fetch_array($result_lnews_8)) 
 	{
@@ -83,6 +91,7 @@ while($row_lnews_8=mysqli_fetch_array($result_lnews_8))
 		$_SESSION['lnews_img_8'] =$row_lnews_8['lnews_img'];
 		$_SESSION['lnews_8'] =$row_lnews_8['lnews'];
 	}
+$sql_1="SELECT * FROM `latestnews` WHERE `lnews_id` = 9 ";
 $result_lnews_9=mysqli_query($con,$sql_1);
 while($row_lnews_9=mysqli_fetch_array($result_lnews_9)) 
 	{
@@ -92,7 +101,7 @@ while($row_lnews_9=mysqli_fetch_array($result_lnews_9))
 	}
 
 
-$sql_2="SELECT * FROM `article_slider` order by `aslider_id` ASC";
+$sql_2="SELECT * FROM `article_slider` WHERE `aslider_id` = 1 ";
 
 $result_sl1=mysqli_query($con,$sql_2);
 while($row_sl1=mysqli_fetch_array($result_sl1)) 
@@ -102,6 +111,7 @@ while($row_sl1=mysqli_fetch_array($result_sl1))
 		$_SESSION['sl_title1'] =$row_sl1['as_title'];
 		$_SESSION['sl_desc1'] =$row_sl1['as_desc'];
 	}
+$sql_2="SELECT * FROM `article_slider` WHERE `aslider_id` = 2 ";
 $result_sl2=mysqli_query($con,$sql_2);
 while($row_sl2=mysqli_fetch_array($result_sl2)) 
 	{
@@ -109,6 +119,33 @@ while($row_sl2=mysqli_fetch_array($result_sl2))
 		$_SESSION['sl_img2'] =$row_sl2['as_img'];
 		$_SESSION['sl_title2'] =$row_sl2['as_title'];
 		$_SESSION['sl_desc2'] =$row_sl2['as_desc'];
+	}
+$sql_2="SELECT * FROM `article_slider` WHERE `aslider_id` = 3 ";
+$result_sl3=mysqli_query($con,$sql_2);
+while($row_sl3=mysqli_fetch_array($result_sl3)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['sl_img3'] =$row_sl3['as_img'];
+		$_SESSION['sl_title3'] =$row_sl3['as_title'];
+		$_SESSION['sl_desc3'] =$row_sl3['as_desc'];
+	}
+$sql_2="SELECT * FROM `article_slider` WHERE `aslider_id` = 4 ";
+$result_sl4=mysqli_query($con,$sql_2);
+while($row_sl4=mysqli_fetch_array($result_sl4)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['sl_img4'] =$row_sl4['as_img'];
+		$_SESSION['sl_title4'] =$row_sl4['as_title'];
+		$_SESSION['sl_desc4'] =$row_sl4['as_desc'];
+	}
+$sql_2="SELECT * FROM `article_slider` WHERE `aslider_id` = 5 ";
+$result_sl5=mysqli_query($con,$sql_2);
+while($row_sl5=mysqli_fetch_array($result_sl5)) 
+	{
+		//$_SESSION['auth']=true;
+		$_SESSION['sl_img5'] =$row_sl5['as_img'];
+		$_SESSION['sl_title5'] =$row_sl5['as_title'];
+		$_SESSION['sl_desc5'] =$row_sl5['as_desc'];
 	}
 
 ?>
@@ -161,7 +198,6 @@ while($row_sl2=mysqli_fetch_array($result_sl2))
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="header_bottom">
           <div class="logo_area"><a href="index.php" class="logo"><img src="<?php echo $_SESSION['logo1']?>" alt="knewsfeed"></a></div>
-          <div class="logo_area"><a href="index.php" class="logo"><img src="<?php echo $_SESSION['logo2']?>" alt="knewsfeed"></a></div>
           <div class="add_banner"><a href="#"><img src="images/addbanner_728x90_V1.jpg" alt=""></a></div>
         </div>
       </div>
@@ -256,24 +292,6 @@ while($row_sl2=mysqli_fetch_array($result_sl2))
             <div class="slider_article">
               <h2><a class="slider_tittle" href="pages/single_page.html"><?php echo $_SESSION['sl_title5']?></a></h2>
               <p><?php echo $_SESSION['sl_desc5']?></p>
-            </div>
-          </div>
-          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="images/slider_img2.jpg" alt=""></a>
-            <div class="slider_article">
-              <h2><a class="slider_tittle" href="pages/single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-              <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
-            </div>
-          </div>
-          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="images/slider_img3.jpg" alt=""></a>
-            <div class="slider_article">
-              <h2><a class="slider_tittle" href="pages/single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-              <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
-            </div>
-          </div>
-          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="images/slider_img1.jpg" alt=""></a>
-            <div class="slider_article">
-              <h2><a class="slider_tittle" href="pages/single_page.html">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-              <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui...</p>
             </div>
           </div>
         </div>
