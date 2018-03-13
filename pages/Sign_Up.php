@@ -2,28 +2,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sign Up</title>
+<title>Register</title>
 
-<link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="../css/signup.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+
 
 </head>
 <body>
 
-<!--header-->
-<?php 
-
-include("header.html");
-
-?>
-<!--//header-->	
-
 
 		
 <div class="logo">
-<a href="index.php"><strong>K</strong>demy</a>
+<a href="../index.php"><strong>K</strong>newsfeed</a>
 </div>
 <div class="box">
-<div class="msg">Sign up for a free account</div>
+<div class="msg">Register for your free account</div>
 
 <!--form start-->
 
@@ -53,12 +48,6 @@ include("header.html");
 </div>
 
 
-<!-- footer -->
-<?php 
 
-include("footer.html");
-
-?>
-			<!-- //footer -->
 </body>
 </html>

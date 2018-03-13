@@ -188,10 +188,16 @@ while($row_sl5=mysqli_fetch_array($result_sl5))
               <li><a href="index.php">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="pages/contact.html">Contact</a></li>
+              <li><a href="pages/Sign_Up.php">Register</a></li>
+              <li><a href="pages/Login.php">Login</a></li>
             </ul>
           </div>
           <div class="header_top_right">
             <p>Friday, December 05, 2045</p>
+            <script>
+var d = new Date(99,5,24);
+document.getElementById("demo").innerHTML = d;
+</script>
           </div>
         </div>
       </div>

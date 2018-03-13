@@ -3,24 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
-<link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="../css/signup.css">
 
 </head>
 <body>
 
-<!--header-->
-<?php 
 
-include("header.html");
-
-?>
-		<!--//header-->
 
 <div class="logo">
-<a href="index.php"><strong>K</strong>demy</a>
+<a href="../index.php"><strong>K</strong>demy</a>
 </div>
 
-<form method="post" action="success_sign_up.php">
+<form method="post" action="../success_sign_up.php">
 <div class="box">
 <h1>Login</h1>
 <!--form starts-->
@@ -38,12 +32,5 @@ include("header.html");
 
 
 
-<!-- footer -->
-<?php 
-
-include("footer.html");
-
-?>
-			<!-- //footer -->
 </body>
 </html>
