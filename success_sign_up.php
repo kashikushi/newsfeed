@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","root","","dw_education");
+$con=mysqli_connect("localhost","root","","dw_newsfeed");
 // Check connection
 define('USE_PCONNECT', 'false'); 
 define('STORE_SESSIONS', 'mysql');
@@ -17,7 +17,7 @@ $username = $_REQUEST['uname'];
 $userpassword = $_REQUEST['password'];
 	 
 	 
-$query="SELECT * FROM `Sign_Up_Data_Table` WHERE `user_name` = '$username' and `password` ='$userpassword' ";
+$query="SELECT * FROM `signup` WHERE `user_name` = '$username' and `password` ='$userpassword' ";
     
 	 
 $result=mysqli_query($con,$query);

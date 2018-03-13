@@ -4,18 +4,21 @@
 <meta charset="UTF-8">
 <title>Register</title>
 
-<link rel="stylesheet" href="../css/signup.css">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
 
 </head>
 <body>
-
+<!--header-->
+ 
+ <?php	include("header.html"); ?>
+ <!--/header-->
 
 		
 <div class="logo">
-<a href="../index.php"><strong>K</strong>newsfeed</a>
+<a href="index.php"><strong>K</strong>newsfeed</a>
 </div>
 <div class="box">
 <div class="msg">Register for your free account</div>
@@ -48,6 +51,8 @@
 </div>
 
 
-
+<!--footer-->
+<?php include("footer.html");?>
+<!--/footer-->
 </body>
 </html>

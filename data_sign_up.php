@@ -27,7 +27,7 @@ $userhaddress = $_REQUEST['haddress'];
 
 
 	 
-$query="INSERT INTO `Sign_Up_Data_Table`(`f_name`, `l_name`, `email`, `user_name`, `password`, `user_dob`, `gender`, `telephone`, `qualification`, `home_address`) VALUES ('$userfname','$userlname','$useremail','$useruname','$userpassword','$userdob','$usergen','$usertel','$userquali','$userhaddress')";
+$query="INSERT INTO `signup`(`f_name`, `l_name`, `email`, `user_name`, `password`, `user_dob`, `gender`, `telephone`, `qualification`, `home_address`) VALUES ('$userfname','$userlname','$useremail','$useruname','$userpassword','$userdob','$usergen','$usertel','$userquali','$userhaddress')";
 
 if ($con->query($query) === TRUE) {
 header("location:Login.php");
