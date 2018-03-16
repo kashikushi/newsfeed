@@ -1,7 +1,7 @@
 
 
 <?php
-$con=mysqli_connect("localhost","sabaudin","sabaudin","sabuadin");
+$con=mysqli_connect("sql311.epizy.com","epiz_21727317","D5qAolJrMRhM","epiz_21727317_article_slider");
 // Check connection
 define('USE_PCONNECT', 'false'); 
 define('STORE_SESSIONS', 'mysql');

@@ -262,7 +262,7 @@ while($row_sl5=mysqli_fetch_array($result_sl5))
               <p><?php echo $_SESSION['sl_desc1']?></p>
             </div>
           </div>
-          <div class="single_iteam"> <a href="single_page.html"> <img src="<?php echo $_SESSION['sl_img2']?>" alt="Article Slide 2"></a>
+          <div class="single_iteam"> <a href="single_page.html"> <img src="images2/<?php echo $_SESSION['sl_img2']?>" alt="Article Slide 2"></a>
             <div class="slider_article">
               <h2><a class="slider_tittle" href="single_page.html"><?php echo $_SESSION['sl_title2']?></a></h2>
               <p><?php echo $_SESSION['sl_desc2']?></p>
