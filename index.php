@@ -237,10 +237,11 @@ while($row_sl5=mysqli_fetch_array($result_sl5))
           </ul>
           <div class="social_area">
             <ul class="social_nav">
-              <li class="facebook"><a href="https://www.facebook.com/kashif.ahmad.585"></a></li>
-              <li class="twitter"><a href="https://twitter.com/kashikushi"></a></li>
-              <li class="pinterest"><a href="https://www.pinterest.com/kashikushi/"></a></li>
-              <li class="youtube"><a href="https://www.youtube.com/channel/UCqD6TNfG201ocsCA2zZEtEA?view_as=subscriber"></a></li>
+              <li class="facebook"><a href="https://www.facebook.com/kashif.ahmad.585" target="_blank"></a></li>
+              <li class="twitter"><a href="https://twitter.com/kashikushi" target="_blank"></a></li>
+              <li class="pinterest"><a href="https://www.pinterest.com/kashikushi" target="_blank"></a></li>
+              <li class="behance"><a href="https://www.behance.net/kashikushib966" target="_blank">Be</a></li>
+              <li class="youtube"><a href="https://www.youtube.com/channel/UCqD6TNfG201ocsCA2zZEtEA?view_as=subscriber" target="_blank"></a></li>
             </ul>
           </div>
         </div>
@@ -650,7 +651,7 @@ while($row_sl5=mysqli_fetch_array($result_sl5))
     </div>
   </footer>
 </div>
-<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/jquery.min.js" ></script> 
 <script src="assets/js/wow.min.js"></script> 
 <script src="assets/js/bootstrap.min.js"></script> 
 <script src="assets/js/slick.min.js"></script> 
